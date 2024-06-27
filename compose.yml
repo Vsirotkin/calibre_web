@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3'
 
 services:
   calibre-web:
@@ -12,7 +12,7 @@ services:
       - OAUTHLIB_RELAX_TOKEN_SCOPE=1 #optional
     volumes:
       # - /path/to/data:/config
-      - /home/vik/Calibre Library:/books
+      - /home/vik/Calibre Library/metadata.db:/books
     ports:
       - 8083:8083
     restart: unless-stopped
